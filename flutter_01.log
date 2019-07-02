@@ -1,0 +1,85 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --no-hot
+
+## exception
+
+HttpException: HttpException: Connection closed before full header was received, uri = http://127.0.0.1:37247/Bk9rX1vqzOU=/ws
+
+```
+#0      _defaultOpenChannel (package:flutter_tools/src/vmservice.dart:89:16)
+<asynchronous suspension>
+#1      VMService.connect (package:flutter_tools/src/vmservice.dart:255:61)
+<asynchronous suspension>
+#2      FlutterDevice._connect (package:flutter_tools/src/resident_runner.dart:128:44)
+<asynchronous suspension>
+#3      ResidentRunner.connectToServiceProtocol (package:flutter_tools/src/resident_runner.dart:793:20)
+<asynchronous suspension>
+#4      ColdRunner.run (package:flutter_tools/src/run_cold.dart:73:15)
+<asynchronous suspension>
+#5      RunCommand.runCommand (package:flutter_tools/src/commands/run.dart:428:37)
+<asynchronous suspension>
+#6      FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:559:18)
+#7      _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#8      _rootRunUnary (dart:async/zone.dart:1132:38)
+#9      _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#10     _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#11     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#12     Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#13     Future._complete (dart:async/future_impl.dart:473:7)
+#14     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#15     _AsyncAwaitCompleter.complete (dart:async-patch/async_patch.dart:28:18)
+#16     _completeOnAsyncReturn (dart:async-patch/async_patch.dart:294:13)
+#17     RunCommand.usageValues (package:flutter_tools/src/commands/run.dart)
+#18     _asyncThenWrapperHelper.<anonymous closure> (dart:async-patch/async_patch.dart:77:64)
+#19     _rootRunUnary (dart:async/zone.dart:1132:38)
+#20     _CustomZone.runUnary (dart:async/zone.dart:1029:19)
+#21     _FutureListener.handleValue (dart:async/future_impl.dart:126:18)
+#22     Future._propagateToListeners.handleValueCallback (dart:async/future_impl.dart:639:45)
+#23     Future._propagateToListeners (dart:async/future_impl.dart:668:32)
+#24     Future._complete (dart:async/future_impl.dart:473:7)
+#25     _SyncCompleter.complete (dart:async/future_impl.dart:51:12)
+#26     _AsyncAwaitCompleter.complete.<anonymous closure> (dart:async-patch/async_patch.dart:33:20)
+#27     _rootRun (dart:async/zone.dart:1124:13)
+#28     _CustomZone.run (dart:async/zone.dart:1021:19)
+#29     _CustomZone.bindCallback.<anonymous closure> (dart:async/zone.dart:947:23)
+#30     _microtaskLoop (dart:async/schedule_microtask.dart:41:21)
+#31     _startMicrotaskLoop (dart:async/schedule_microtask.dart:50:5)
+#32     _runPendingImmediateCallback (dart:isolate-patch/isolate_patch.dart:115:13)
+#33     _RawReceivePortImpl._handleMessage (dart:isolate-patch/isolate_patch.dart:172:5)
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, v1.5.4-hotfix.2, on Linux, locale en_US.UTF-8)
+    [32m•[39m Flutter version 1.5.4-hotfix.2 at /home/mike/development/flutter
+    [32m•[39m Framework revision 7a4c33425d (9 weeks ago), 2019-04-29 11:05:24 -0700
+    [32m•[39m Engine revision 52c7a1e849
+    [32m•[39m Dart version 2.3.0 (build 2.3.0-dev.0.5 a1668566e5)
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 29.0.0)
+    [32m•[39m Android SDK at /home/mike/Android/Sdk
+    [32m•[39m Android NDK location not configured (optional; useful for native profiling support)
+    [32m•[39m Platform android-29, build-tools 29.0.0
+    [32m•[39m Java binary at: /home/mike/android-studio/jre/bin/java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b16-5323222)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Android Studio (version 3.4)
+    [32m•[39m Android Studio at /home/mike/android-studio
+    [32m•[39m Flutter plugin version 36.1.1
+    [32m•[39m Dart plugin version 183.6270
+    [32m•[39m Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1343-b16-5323222)
+
+[32m[✓][39m VS Code (version 1.35.1)
+    [32m•[39m VS Code at /usr/share/code
+    [32m•[39m Flutter extension version 3.2.0
+
+[32m[✓][39m Connected device (1 available)
+    [32m•[39m Android SDK built for x86 • emulator-5554 • android-x86 • Android 10 (API 29) (emulator)
+
+[32m•[39m No issues found!
+```
