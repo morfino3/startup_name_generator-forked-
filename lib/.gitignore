@@ -13,8 +13,9 @@ pubspec.lock
 doc/api/
 
 #logs
-*.logs
-**/logs/test.log
+**/logs
+*.log
+flutter_[!01].log
 
 # Avoid committing generated Javascript files:
 *.dart.js
