@@ -14,7 +14,7 @@ doc/api/
 
 #logs
 *.logs
-*.log
+**/logs/test.log
 
 # Avoid committing generated Javascript files:
 *.dart.js
