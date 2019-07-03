@@ -59,18 +59,18 @@ class RandomWordsState extends State<RandomWords> {
           ),
         ),
         background: Container(
-          color: Colors.green,
+          color: Colors.red,
           child: Icon(Icons.check),
         ),
 
         key: ValueKey(true),
         secondaryBackground: Container(
-          color: Colors.red,
+          color: Colors.green,
           child: Icon(Icons.cancel),
         ),
 
         
-        direction: DismissDirection.horizontal,
+        //direction: DismissDirection.horizontal,
        
      
       );
